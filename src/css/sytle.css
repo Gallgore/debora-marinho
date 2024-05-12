@@ -330,7 +330,7 @@ i {
   font-size: clamp(48px, 4vw, 54px);
 }
 .sobre-content p {
-  text-align: center;
+  text-align: justify;
   -moz-columns: 558px 1;
        columns: 558px 1;
   font-size: 24px;
@@ -338,6 +338,7 @@ i {
 .sobre-content img {
   max-width: 430px;
   border-radius: 3%;
+  margin: 0 24px;
 }
 
 @media (max-width: 40.925em) {
