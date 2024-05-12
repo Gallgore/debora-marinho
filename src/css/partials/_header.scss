@@ -3,6 +3,7 @@ header{
     position: fixed;
     top: 0px;
     left: 0px;
+    z-index: 1;
 }
 
 .wrapper.rolagem{
@@ -108,5 +109,8 @@ i{
     }
     .header-button{
         display: none;
+    }
+    .wrapper{
+        background-color: $primary-normal;
     }
 }

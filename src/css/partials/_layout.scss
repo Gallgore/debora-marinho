@@ -1,6 +1,6 @@
 .container{
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: auto 0;
     padding: 0 8px;
 }
 
@@ -16,41 +16,25 @@
         
         line-height: 150%;
         max-width: 940px;
-        font-size: clamp(42px,4vw,54px);
+        font-size: clamp(48px,4vw,54px);
     }
     h3{
         
         line-height: 10px;
         max-width: 940px;
-        font-size: clamp(16px,3vw,22px);
+        font-size: clamp(20px,3vw,22px);
         margin-top: 15%;
         
     }
     p{
         
         margin: 24px 0;
-        font-size: clamp(16px,3vw,20px);
+        font-size: clamp(18px,3vw,20px);
     }
     img{
         max-width: 430px;
         border-radius: 50%;
     }
-}
-
-.hero::before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    opacity: 0.9;
-    
 }
 
 .button-contact{
@@ -62,15 +46,42 @@
     transition: background-color 0.8s;
     font-size: 32px;
     font-weight: 600;
-    margin: 20px 0;
+    margin: 28px 0;
     max-width: 100%;
 }
+
+@media (max-width: 40.925em) {
+    .hero{
+        padding: 34px 0;
+        min-height: 60vh;
+        flex-direction: column;
+        text-align: center;
+        img{
+            max-width: 280px;
+            border-radius: 50%;
+        }
+    }
+    
+.hero::before{
+    content: '';
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 34px;
+}
+}
+
+
 .button-contact:hover{
     background-color: $secondary-dark;
 
 }
 
-.psicanalise{
+.psicanalise1{
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -78,7 +89,8 @@
     color: $cinza-light;
     background-color: $white-normal;
     padding: 15px;
-    height: 500px;
+    max-width: 100%;
+
 }
 
 .psicanalise-conteudo{
@@ -88,16 +100,25 @@
     flex-direction: column;
     h2{
         margin: 32px;
-        font-size: 54px;
+        font-size: clamp(48px,4vw,54px);
     }
     p{
-        text-align: justify;
-        
+        text-align: center;
+        columns: 558px 1;
         font-size: 24px;
     }
     margin: 0 auto;
 }
 
+@media (max-width: 40.925em) {
+    .psicanalise1{
+        flex-direction: column-reverse;
+        columns: 250px 1;
+
+    }
+
+
+}
 .separadores{
     display: flex;
     justify-content: center;
