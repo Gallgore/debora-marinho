@@ -83,7 +83,7 @@
 .psicanalise{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
     color: $cinza-light;
@@ -97,7 +97,7 @@
 }
 
 .psicanalise-conteudo{
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -108,11 +108,30 @@
     }
     p{
         text-align: center;
-        columns: 558px 1;
-        font-size: 24px;
+        columns: 60% 1;
+        font-size: 28px;
     }
     margin: 0 auto;
+    gap: 14px;
 }
+
+.listas{
+    
+    border: 1px solid $secondary-dark;
+    border-radius: 4px; /* Isso arredonda as bordas das caixas */
+    padding: 40px; /* Isso adiciona espaço dentro das caixas */
+    margin: 10px; /* Isso adiciona espaço entre as caixas */
+    width: 100%; /* Isso define a largura de cada caixa para 30% do container */
+    ul{
+        list-style: none;
+        
+
+    }
+    font-size: 24px;
+}
+
+
+
 
 @media (max-width: 40.925em) {
     .psicanalise{
@@ -148,6 +167,18 @@
     max-width: 100%;
 
 }
+.leis-constelacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap:24px;
+    img{
+        max-width: 430px;
+
+    }
+}
+
 .constelacao-familiar-conteudo{
     justify-content: space-between;
     align-items: center;
@@ -168,8 +199,62 @@
 
 @media (max-width: 40.925em) {
     .constelacao-familiar{
-        flex-direction: column-reverse;
+        flex-direction: column;
         columns: 250px 1;
 
+    }
+    #lottie-psicanalise{
+        margin-left: 0;
+    }
+}
+.sobre{
+    background-color: $white-normal;
+}
+.sobre-content{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    // margin: 24px 0;;
+    padding: 34px 0;
+    
+    h2{
+        text-align: center;
+        margin: 32px;
+        font-size: clamp(48px,4vw,54px);
+    }
+    p{
+        text-align: center;
+        columns: 558px 1;
+        font-size: 24px;
+    }
+    img{
+        max-width: 430px;
+        border-radius: 3%;
+    }
+    margin: 0 auto;
+}
+
+@media (max-width: 40.925em) {
+    .sobre-content{
+        flex-direction: column;
+        columns: 250px 1;
+
+    }
+}
+
+.Contato{
+    color: $white-normal;
+    align-items: center;
+    h3{
+
+        
+        line-height: 10px;
+        max-width: 940px;
+        font-size: clamp(20px,3vw,22px);
+
+        margin: 12px 0;
+
+        
     }
 }

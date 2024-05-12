@@ -1,8 +1,13 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -190,7 +195,7 @@ i {
 .psicanalise {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   color: #545454;
@@ -204,11 +209,12 @@ i {
 }
 
 .psicanalise-conteudo {
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  gap: 14px;
 }
 .psicanalise-conteudo h2 {
   text-align: center;
@@ -217,9 +223,21 @@ i {
 }
 .psicanalise-conteudo p {
   text-align: center;
-  -moz-columns: 558px 1;
-       columns: 558px 1;
+  -moz-columns: 60% 1;
+       columns: 60% 1;
+  font-size: 28px;
+}
+
+.listas {
+  border: 1px solid #cb5c64;
+  border-radius: 4px; /* Isso arredonda as bordas das caixas */
+  padding: 40px; /* Isso adiciona espaço dentro das caixas */
+  margin: 10px; /* Isso adiciona espaço entre as caixas */
+  width: 100%; /* Isso define a largura de cada caixa para 30% do container */
   font-size: 24px;
+}
+.listas ul {
+  list-style: none;
 }
 
 @media (max-width: 40.925em) {
@@ -254,6 +272,17 @@ i {
   max-width: 100%;
 }
 
+.leis-constelacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+.leis-constelacao img {
+  max-width: 430px;
+}
+
 .constelacao-familiar-conteudo {
   justify-content: space-between;
   align-items: center;
@@ -275,11 +304,60 @@ i {
 
 @media (max-width: 40.925em) {
   .constelacao-familiar {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    -moz-columns: 250px 1;
+         columns: 250px 1;
+  }
+  #lottie-psicanalise {
+    margin-left: 0;
+  }
+}
+.sobre {
+  background-color: #ffffff;
+}
+
+.sobre-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 34px 0;
+  margin: 0 auto;
+}
+.sobre-content h2 {
+  text-align: center;
+  margin: 32px;
+  font-size: clamp(48px, 4vw, 54px);
+}
+.sobre-content p {
+  text-align: center;
+  -moz-columns: 558px 1;
+       columns: 558px 1;
+  font-size: 24px;
+}
+.sobre-content img {
+  max-width: 430px;
+  border-radius: 3%;
+}
+
+@media (max-width: 40.925em) {
+  .sobre-content {
+    flex-direction: column;
     -moz-columns: 250px 1;
          columns: 250px 1;
   }
 }
+.Contato {
+  color: #ffffff;
+  align-items: center;
+}
+.Contato h3 {
+  line-height: 10px;
+  max-width: 940px;
+  font-size: clamp(20px, 3vw, 22px);
+  margin: 12px 0;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -298,4 +376,14 @@ img {
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #cb5c64;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #eaa59f;
 }/*# sourceMappingURL=sytle.css.map */
