@@ -80,7 +80,7 @@
 
 }
 
-.psicanalise1{
+.psicanalise{
     position: relative;
     display: flex;
     justify-content: center;
@@ -92,6 +92,9 @@
     max-width: 100%;
 
 }
+#lottie-psicanalise{
+    margin-left: 50px;
+}
 
 .psicanalise-conteudo{
     justify-content: center;
@@ -99,6 +102,7 @@
     display: flex;
     flex-direction: column;
     h2{
+        text-align: center;
         margin: 32px;
         font-size: clamp(48px,4vw,54px);
     }
@@ -111,7 +115,7 @@
 }
 
 @media (max-width: 40.925em) {
-    .psicanalise1{
+    .psicanalise{
         flex-direction: column-reverse;
         columns: 250px 1;
 
@@ -131,4 +135,43 @@
     background-color: $secondary-normal;
     color: $white-dark;
     padding: 30px;
+}
+
+.constelacao-familiar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: $white-dark;
+    background-color: $secondary-dark;
+    max-width: 100%;
+
+}
+.constelacao-familiar-conteudo{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    h2{
+        text-align: center;
+        margin: 32px;
+        font-size: clamp(48px,4vw,54px);
+    }
+    p{
+        text-align: center;
+        columns: 558px 1;
+        font-size: 24px;
+    }
+    margin: 0 auto;
+}
+
+@media (max-width: 40.925em) {
+    ..constelacao-familiar{
+        flex-direction: column-reverse;
+        columns: 250px 1;
+
+    }
+
+
 }

@@ -187,7 +187,7 @@ i {
   background-color: #cb5c64;
 }
 
-.psicanalise1 {
+.psicanalise {
   position: relative;
   display: flex;
   justify-content: center;
@@ -199,6 +199,10 @@ i {
   max-width: 100%;
 }
 
+#lottie-psicanalise {
+  margin-left: 50px;
+}
+
 .psicanalise-conteudo {
   justify-content: center;
   align-items: center;
@@ -207,6 +211,7 @@ i {
   margin: 0 auto;
 }
 .psicanalise-conteudo h2 {
+  text-align: center;
   margin: 32px;
   font-size: clamp(48px, 4vw, 54px);
 }
@@ -218,7 +223,7 @@ i {
 }
 
 @media (max-width: 40.925em) {
-  .psicanalise1 {
+  .psicanalise {
     flex-direction: column-reverse;
     -moz-columns: 250px 1;
          columns: 250px 1;
@@ -234,10 +239,47 @@ i {
   height: 100px;
   overflow: hidden;
   background-color: #e4908a;
-  color: #f4dadb;
+  color: #FEF5DA;
   padding: 30px;
 }
 
+.constelacao-familiar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  color: #FEF5DA;
+  background-color: #cb5c64;
+  max-width: 100%;
+}
+
+.constelacao-familiar-conteudo {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.constelacao-familiar-conteudo h2 {
+  text-align: center;
+  margin: 32px;
+  font-size: clamp(48px, 4vw, 54px);
+}
+.constelacao-familiar-conteudo p {
+  text-align: center;
+  -moz-columns: 558px 1;
+       columns: 558px 1;
+  font-size: 24px;
+}
+
+@media (max-width: 40.925em) {
+  .psicanalise {
+    flex-direction: column-reverse;
+    -moz-columns: 250px 1;
+         columns: 250px 1;
+  }
+}
 body {
   width: 100%;
   height: 100vh;
