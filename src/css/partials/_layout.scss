@@ -245,7 +245,14 @@
     .sobre-content{
         flex-direction: column;
         columns: 300px 1;
+        padding: 12px 0;
+        img{
+            max-width: 300px;
+            border-radius: 3%;
+            margin: 0 4px;
+        }
     }
+
     p{        padding: 22px;
     text-align: justify;}
 }
@@ -257,7 +264,7 @@
     flex-direction: column;
     color: $cinza-light;
     img{
-        width: 300px;
+        width: 280px;
     }
     h3{
         font-size: 25px;
@@ -269,7 +276,7 @@
 .btn-whatsapp{
     position: fixed;
     bottom: 10px;
-    right: 8px;
+    right: 12px;
     z-index: 99;
     img{
         max-width: 74px;
@@ -304,7 +311,7 @@
 @media screen and (max-width:768px) {
     .btn-whatsapp{
         bottom: 30px;
-        right: 10px;
+        right: 24px;
         img{
             max-width: 54px;
         }
