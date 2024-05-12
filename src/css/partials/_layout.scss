@@ -11,7 +11,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 25px;
     h1{
         
         line-height: 150%;
@@ -52,7 +52,7 @@
 
 @media (max-width: 40.925em) {
     .hero{
-        padding: 34px 0;
+        padding: 120px 0;
         min-height: 60vh;
         flex-direction: column;
         text-align: center;
@@ -251,7 +251,62 @@
 }
 
 .footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: $cinza-light;
     img{
-        max-width: 30px;
+        width: 300px;
+    }
+    h3{
+        font-size: 25px;
+        color: $white-dark;
+        padding: 8px 0;
+    }
+}
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 10px;
+    right: 8px;
+    z-index: 99;
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -130px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $primary-normal;
+    color: $white-dark;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+    .btn-whatsapp{
+        bottom: 30px;
+        right: 10px;
+        img{
+            max-width: 54px;
+        }
     }
 }

@@ -131,7 +131,7 @@ i {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 25px;
 }
 .hero h1 {
   line-height: 150%;
@@ -168,7 +168,7 @@ i {
 
 @media (max-width: 40.925em) {
   .hero {
-    padding: 34px 0;
+    padding: 120px 0;
     min-height: 60vh;
     flex-direction: column;
     text-align: center;
@@ -315,10 +315,6 @@ i {
     flex-direction: column;
   }
 }
-.sobre {
-  background-color: #ffffff;
-}
-
 .sobre-content {
   justify-content: center;
   align-items: center;
@@ -355,17 +351,65 @@ i {
     text-align: justify;
   }
 }
-.Contato {
-  color: #ffffff;
+.footer {
+  justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #545454;
 }
-.Contato h3 {
-  line-height: 10px;
-  max-width: 940px;
-  font-size: clamp(20px, 3vw, 22px);
-  margin: 12px 0;
+.footer img {
+  width: 300px;
+}
+.footer h3 {
+  font-size: 25px;
+  color: #FEF5DA;
+  padding: 8px 0;
 }
 
+.btn-whatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 8px;
+  z-index: 99;
+}
+.btn-whatsapp img {
+  max-width: 74px;
+  transition: transform 0.4s;
+}
+.btn-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -130px;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #6f233f;
+  color: #FEF5DA;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp {
+    bottom: 30px;
+    right: 10px;
+  }
+  .btn-whatsapp img {
+    max-width: 54px;
+  }
+}
 body {
   width: 100%;
   height: 100vh;
@@ -401,5 +445,5 @@ h1, h2, h3 {
 }
 
 p, li {
-  font-family: "Source Sans 3", serif;
+  font-family: "Montserrat", serif;
 }/*# sourceMappingURL=sytle.css.map */
