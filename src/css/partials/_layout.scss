@@ -1,0 +1,113 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.hero{
+    color: $white-normal;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    h1{
+        
+        line-height: 150%;
+        max-width: 940px;
+        font-size: clamp(42px,4vw,54px);
+    }
+    h3{
+        
+        line-height: 10px;
+        max-width: 940px;
+        font-size: clamp(16px,3vw,22px);
+        margin-top: 15%;
+        
+    }
+    p{
+        
+        margin: 24px 0;
+        font-size: clamp(16px,3vw,20px);
+    }
+    img{
+        max-width: 430px;
+        border-radius: 50%;
+    }
+}
+
+.hero::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+    
+}
+
+.button-contact{
+    border: 1px solid $secondary-dark;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.8s;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 20px 0;
+    max-width: 100%;
+}
+.button-contact:hover{
+    background-color: $secondary-dark;
+
+}
+
+.psicanalise{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: $cinza-light;
+    background-color: $white-normal;
+    padding: 15px;
+    height: 500px;
+}
+
+.psicanalise-conteudo{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    h2{
+        margin: 32px;
+        font-size: 54px;
+    }
+    p{
+        text-align: justify;
+        
+        font-size: 24px;
+    }
+    margin: 0 auto;
+}
+
+.separadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(24px,3vw,30px);
+    width: 100%;
+    left: 0;
+    height: 100px;
+    overflow: hidden;
+    background-color: $secondary-normal;
+    color: $white-dark;
+    padding: 30px;
+}
