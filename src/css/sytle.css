@@ -246,6 +246,9 @@ i {
     -moz-columns: 250px 1;
          columns: 250px 1;
   }
+  #lottie-psicanalise {
+    margin-left: 0;
+  }
 }
 .separadores {
   display: flex;
@@ -308,8 +311,8 @@ i {
     -moz-columns: 250px 1;
          columns: 250px 1;
   }
-  #lottie-psicanalise {
-    margin-left: 0;
+  .leis-constelacao {
+    flex-direction: column;
   }
 }
 .sobre {
@@ -344,8 +347,12 @@ i {
 @media (max-width: 40.925em) {
   .sobre-content {
     flex-direction: column;
-    -moz-columns: 250px 1;
-         columns: 250px 1;
+    -moz-columns: 300px 1;
+         columns: 300px 1;
+  }
+  p {
+    padding: 22px;
+    text-align: justify;
   }
 }
 .Contato {
@@ -387,4 +394,12 @@ a {
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #eaa59f;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+p, li {
+  font-family: "Source Sans 3", serif;
 }/*# sourceMappingURL=sytle.css.map */
