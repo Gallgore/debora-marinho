@@ -12,22 +12,20 @@ html {
 
 header {
   width: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
+  height: 8vh;
   z-index: 1;
+  position: fixed;
 }
 
 .wrapper.rolagem {
   background-color: #6f233f;
-  padding: 0px 4%;
 }
 
 .wrapper {
   top: 5px;
   max-width: 100%;
   margin: auto;
-  padding: 20px 4%;
+  padding: 0 1%;
   transition: 1s;
 }
 
@@ -36,7 +34,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 0.4rem;
 }
 nav ul {
@@ -62,8 +60,9 @@ nav .logo {
   max-width: 150px;
 }
 
-nav #toggle, nav label {
-  display: none;
+nav #toggle,
+nav label {
+  visibility: hidden;
 }
 
 a {
@@ -92,24 +91,25 @@ i {
   background-color: #cb5c64;
 }
 
-@media (max-width: 40.825em) {
-  nav .menu {
+@media screen and (max-width: 951px) {
+  .menu {
     width: 100%;
     height: 0;
     overflow: hidden;
+    transition: 0.5s;
   }
-  nav ul {
+  .menu ul {
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem 0;
   }
   nav label {
     display: inline-flex;
     color: #ffffff;
     cursor: pointer;
+    visibility: visible;
   }
   nav #toggle:checked ~ .menu {
-    height: 100%;
+    height: 23vh;
   }
   .header-button {
     display: none;
@@ -119,7 +119,7 @@ i {
   }
 }
 .container {
-  max-width: 100%;
+  max-width: 100vw;
   margin: auto 0;
   padding: 0 8px;
 }
@@ -130,7 +130,7 @@ i {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 25px;
 }
 .hero h1 {
@@ -153,6 +153,12 @@ i {
   border-radius: 50%;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button-contact {
   border: 1px solid #cb5c64;
   padding: 8px 24px;
@@ -166,11 +172,15 @@ i {
   max-width: 100%;
 }
 
-@media (max-width: 40.925em) {
+.button-contact:hover {
+  background-color: #cb5c64;
+}
+
+@media screen and (max-width: 951px) {
   .hero {
     padding: 120px 0;
-    min-height: 60vh;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
   }
   .hero img {
@@ -188,20 +198,16 @@ i {
     margin: 34px;
   }
 }
-.button-contact:hover {
-  background-color: #cb5c64;
-}
-
 .psicanalise {
-  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   color: #545454;
   background-color: #ffffff;
-  padding: 15px;
-  max-width: 100%;
+}
+.psicanalise div {
+  flex-grow: 1;
 }
 
 #lottie-psicanalise {
@@ -217,7 +223,6 @@ i {
   gap: 14px;
 }
 .psicanalise-conteudo h2 {
-  text-align: center;
   margin: 32px;
   font-size: clamp(48px, 4vw, 54px);
 }
@@ -230,17 +235,21 @@ i {
 
 .listas {
   border: 1px solid #cb5c64;
-  border-radius: 4px; /* Isso arredonda as bordas das caixas */
-  padding: 40px; /* Isso adiciona espaço dentro das caixas */
-  margin: 10px; /* Isso adiciona espaço entre as caixas */
-  width: 100%; /* Isso define a largura de cada caixa para 30% do container */
+  border-radius: 4px;
+  /* Isso arredonda as bordas das caixas */
+  padding: 40px;
+  /* Isso adiciona espaço dentro das caixas */
+  margin: 10px;
+  /* Isso adiciona espaço entre as caixas */
+  width: 100%;
+  /* Isso define a largura de cada caixa para 30% do container */
   font-size: 24px;
 }
 .listas ul {
   list-style: none;
 }
 
-@media (max-width: 40.925em) {
+@media screen and (max-width: 768px) {
   .psicanalise {
     flex-direction: column-reverse;
     -moz-columns: 250px 1;
@@ -254,25 +263,22 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(24px, 3vw, 30px);
   width: 100%;
   left: 0;
-  height: 100px;
-  overflow: hidden;
+  height: 20vh;
   background-color: #e4908a;
   color: #FEF5DA;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .constelacao-familiar {
-  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   color: #FEF5DA;
   background-color: #cb5c64;
-  max-width: 100%;
+  overflow: hidden;
 }
 
 .leis-constelacao {
@@ -305,7 +311,7 @@ i {
   font-size: 24px;
 }
 
-@media (max-width: 40.925em) {
+@media screen and (max-width: 768px) {
   .constelacao-familiar {
     flex-direction: column;
     -moz-columns: 250px 1;
@@ -316,16 +322,14 @@ i {
   }
 }
 .sobre-content {
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   display: flex;
   flex-direction: row;
-  padding: 34px 0;
-  margin: 0 auto;
 }
 .sobre-content h2 {
   text-align: center;
-  margin: 32px;
+  margin: 60px;
   font-size: clamp(48px, 4vw, 54px);
 }
 .sobre-content p {
@@ -333,6 +337,7 @@ i {
   -moz-columns: 558px 1;
        columns: 558px 1;
   font-size: 24px;
+  margin: 40px;
 }
 .sobre-content img {
   max-width: 430px;
@@ -340,7 +345,7 @@ i {
   margin: 0 24px;
 }
 
-@media (max-width: 40.925em) {
+@media screen and (max-width: 768px) {
   .sobre-content {
     flex-direction: column;
     -moz-columns: 300px 1;
@@ -349,12 +354,11 @@ i {
   }
   .sobre-content img {
     max-width: 300px;
-    border-radius: 3%;
     margin: 0 4px;
   }
   p {
-    padding: 22px;
-    text-align: justify;
+    padding: 2px;
+    margin: 0;
   }
 }
 .footer {
@@ -409,8 +413,8 @@ i {
 
 @media screen and (max-width: 768px) {
   .btn-whatsapp {
-    bottom: 30px;
-    right: 24px;
+    bottom: 8px;
+    right: 15px;
   }
   .btn-whatsapp img {
     max-width: 54px;
@@ -436,18 +440,9 @@ a {
   text-decoration: none;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #cb5c64;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background-color: #eaa59f;
-}
-
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
+  text-align: center;
 }
 
 p, li {

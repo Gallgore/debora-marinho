@@ -1,38 +1,39 @@
-header{
+header {
     width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    height: 8vh;
+    // top: 0px;
+    // left: 0px;
     z-index: 1;
+    position: fixed;
 }
 
-.wrapper.rolagem{
+.wrapper.rolagem {
     background-color: $primary-normal;
-    padding: 0px 4%;
-    
+
 }
 
-.wrapper{
+.wrapper {
     top: 5px;
     max-width: 100%;
     margin: auto;
-    padding: 20px 4%;
+    padding: 0 1%;
     transition: 1s;
 }
 
-nav{
+nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
     border-radius: 0.4rem;
-    ul{
+
+    ul {
         list-style: none;
         display: flex;
         gap: 2rem;
-        
-        .link:after{
+
+        .link:after {
             content: "";
             position: absolute;
             background-color: $secondary-dark;
@@ -42,22 +43,25 @@ nav{
             bottom: -10px;
             transition: 0.3s;
         }
-        .link:hover:after{
+
+        .link:hover:after {
             width: 100%;
         }
-        
+
     }
-    .logo{
+
+    .logo {
         font-weight: 700;
-        max-width: 150px;  
+        max-width: 150px;
     }
 }
 
-nav #toggle, nav label{
-    display: none;
+nav #toggle,
+nav label {
+    visibility: hidden;
 }
 
-a{
+a {
     text-decoration: none;
     color: $white-normal;
     font-size: 18px;
@@ -66,11 +70,11 @@ a{
     position: relative;
 }
 
-i{
+i {
     color: $white-normal;
 }
 
-.header-button{
+.header-button {
     border: 1px solid $secondary-dark;
     padding: 8px 24px;
     border-radius: 4px;
@@ -79,38 +83,42 @@ i{
     transition: background-color 0.8s;
 }
 
-.header-button:hover{
+.header-button:hover {
     background-color: $secondary-dark;
 
 }
-@media (max-width: 40.825em) {
-    nav .menu{
+
+@media screen and (max-width:951px) {
+    .menu {
         width: 100%;
         height: 0;
         overflow: hidden;
-        
+        transition: 0.5s;
+        ul {
+            flex-direction: column;
+            align-items: center;
+            // padding: 0.5rem 0;
     }
-    nav ul{
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem 0;
-        
-        
-    }
-    nav label{
+}
+    nav label {
         display: inline-flex;
         color: $white-normal;
         cursor: pointer;
-        
+        visibility: visible;
     }
-    nav #toggle:checked ~ .menu{
-        height: 100%;
+
+    nav #toggle:checked~.menu {
+        height: 23vh;
         
+
     }
-    .header-button{
+
+    .header-button {
         display: none;
     }
-    .wrapper{
+
+    .wrapper {
         background-color: $primary-normal;
+
     }
 }

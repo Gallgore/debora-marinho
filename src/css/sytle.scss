@@ -31,19 +31,9 @@ a{
     text-decoration: none;
     
 }
-
-::-webkit-scrollbar{
-    width: 8px;
-    background-color: $secondary-dark;
-}
-
-::-webkit-scrollbar-thumb{
-    border-radius: 8px;
-    background-color: $secondary-light;
-
-}
 h1,h2,h3{
     font-family:'Playfair Display', serif;
+    text-align: center;
 }
 p,li{
     font-family:'Montserrat', serif;
